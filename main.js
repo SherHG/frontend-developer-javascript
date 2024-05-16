@@ -49,7 +49,7 @@ function toggleCarritoAside() {
    shoppingCartContainer.classList.toggle('inactive');
 }
 
-function openProductDetailAside() {   
+function openProductDetailAside() {  
    shoppingCartContainer.classList.add('inactive');
    productDetailContainer.classList.remove('inactive');
 }
@@ -62,20 +62,26 @@ function closeProductDetailAside() {
 const productList = [];
 productList.push({
    name: 'Bike',
-   price: 120,
+   price: 1120,
    image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 });
 
 productList.push({
    name: 'TV 50"',
-   price: 3120,
+   price: 6120,
    image: 'https://subgurim.net/imagenes/los-mejores-televisores-de-60-pulgadas.jpg',
 });
 
 productList.push({
    name: 'Laptop',
-   price: 1120,
+   price: 11250,
    image: 'https://images.pexels.com/photos/40185/mac-freelancer-macintosh-macbook-40185.jpeg?auto=compress&cs=tinysrgb&w=600',
+});
+
+productList.push({
+   name: 'Nintendo Switch',
+   price: 6999,
+   image: 'https://images.pexels.com/photos/6993182/pexels-photo-6993182.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
 });
 
 function renderProducts(arr){
@@ -86,7 +92,7 @@ function renderProducts(arr){
       //product = {name, price, image} -> product.image
       const productImg = document.createElement('img');
       productImg.setAttribute('src', product.image);
-      productImg.addEventListener('click', openProductDetailAside())
+      productImg.addEventListener('click', openProductDetailAside);
    
       const productInfo = document.createElement('div');
       productInfo.classList.add('product-info');
